@@ -3,7 +3,6 @@ pipeline{
  	stages { 	
  	 stage('Clone source') {
  	steps {
- 	cleanWs()
  	bat 'git clone https://github.com/mote-vishnu/hello-world-jenkins-pipeline-spring-boot.git'
  	}
  	}
@@ -18,5 +17,6 @@ pipeline{
  	 bat 'java -jar /hello-world-jenkins-pipeline-spring-boot/target/*.jar'
  	}
  	}
+  cleanWs()
  }
 }
