@@ -1,10 +1,16 @@
 pipeline{
  agent any
- stages {
- 	stage('clone source') {
+ stages { 	
+ 	stage('Build project') {
  	steps {
- 	 bat 'java -version'
+ 	 'mvn clean package'
  	}
  	}
- } 	
-}	
+ 	
+ 	stage('Deploy') {
+ 	steps {
+ 	 'java -jar /target/*.jar'
+ 	}
+ 	}
+ }
+}
