@@ -3,13 +3,13 @@ pipeline{
  stages { 	
  	stage('Build project') {
  	steps {
- 	 'mvn clean package'
+ 	 bat 'mvn clean package'
  	}
  	}
  	
  	stage('Deploy') {
  	steps {
- 	 'java -jar /target/*.jar'
+ 	 bat 'java -jar /target/*.jar'
  	}
  	}
  }
