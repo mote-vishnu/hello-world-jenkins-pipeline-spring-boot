@@ -3,7 +3,7 @@ pipeline{
  stages {
  	stage('clone source') {
  	steps {
- 	 'java -version'
+ 	 bat 'java -version'
  	}
  	}
  } 	
