@@ -14,7 +14,7 @@ pipeline{
  	
  	stage('Deploy') {
  	steps {
- 	 bat 'java -jar /target/*.jar'
+ 	 bat 'java -jar /hello-world-jenkins-pipeline-spring-boot/target/*.jar'
  	}
  	}
  }
