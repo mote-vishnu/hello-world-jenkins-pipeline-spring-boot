@@ -3,20 +3,8 @@ pipeline{
  stages {
  	stage('clone source') {
  	steps {
- 	 'git clone'
+ 	 'java -version'
  	}
  	}
+} 	
  	
- 	stage('Build project') {
- 	steps {
- 	 'mvn clean package'
- 	}
- 	}
- 	
- 	stage('Deploy') {
- 	steps {
- 	 'java -jar /target/*.jar'
- 	}
- 	}
- }
-}
