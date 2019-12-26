@@ -6,5 +6,5 @@ pipeline{
  	 'java -version'
  	}
  	}
-} 	
- 	
+ } 	
+}	
