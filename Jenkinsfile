@@ -1,4 +1,5 @@
 pipeline{
+ try{
  agent any
  	stages { 	
  	 stage('Clone source') {
@@ -17,5 +18,9 @@ pipeline{
  	 bat 'java -jar /hello-world-jenkins-pipeline-spring-boot/target/*.jar'
  	}
  	}
+ }
+ }
+ finally {
+ bat 'rm hello-world-jenkins-pipeline-spring-boot'
  }
 }
