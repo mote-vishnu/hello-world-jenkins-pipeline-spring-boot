@@ -1,6 +1,7 @@
 pipeline{
- try{
+
  agent any
+ try {
  	stages { 	
  	 stage('Clone source') {
  	steps {
