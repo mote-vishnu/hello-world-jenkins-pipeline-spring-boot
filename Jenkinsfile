@@ -3,7 +3,7 @@ pipeline{
  	stages { 	
  	 stage('Clone source') {
  	steps {
- 	bat 'git clone https://github.com/mote-vishnu/hello-world-jenkins-pipeline-spring-boot.git'
+ 	bat 'git fetch'
  	}
  	}
  	stage('Build project') {
