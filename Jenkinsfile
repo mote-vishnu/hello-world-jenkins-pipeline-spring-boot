@@ -1,6 +1,11 @@
 pipeline{
  agent any
- stages { 	
+ 	stages { 	
+ 	 stage('Clone source') {
+ 	steps {
+ 	bat 'git clone C:\jenkins-demos\hello-world-jenkins-pipeline-spring-boot.git'
+ 	}
+ 	}
  	stage('Build project') {
  	steps {
  	 bat 'mvn clean package'
@@ -9,7 +14,7 @@ pipeline{
  	
  	stage('Deploy') {
  	steps {
- 	 bat 'mvn springboot:run'
+ 	 bat 'java -jar /target/*.jar'
  	}
  	}
  }
