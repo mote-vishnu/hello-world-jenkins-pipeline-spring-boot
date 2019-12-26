@@ -17,6 +17,10 @@ pipeline{
  	 bat 'java -jar /hello-world-jenkins-pipeline-spring-boot/target/*.jar'
  	}
  	}
-  cleanWs()
+	stage('clean jenkins workspace') {
+	steps {
+	  cleanWs()
+	}
+	}
  }
 }
