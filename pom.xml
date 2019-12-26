@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hello.world</groupId>
-	<artifactId>hello-world-jenkins-pipeline-spring-boot</artifactId>
+	<artifactId>hello-jenkins-pipeline</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hello-world-jenkins-pipeline-spring-boot</name>
+	<name>hello-jenkins-pipeline</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
