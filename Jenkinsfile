@@ -4,6 +4,7 @@ pipeline{
  	 stage('Clone source') {
  	steps {
  	bat 'git fetch'
+ 	bat 'git pull'
  	}
  	}
  	stage('Build project') {
