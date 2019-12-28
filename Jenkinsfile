@@ -14,7 +14,7 @@ pipeline{
  	
  	stage('Deploy') {
  	steps {
- 	 bat 'java -jar ./hello-world-jenkins-pipeline-spring-boot/target/bootJar.jar'
+ 	 bat 'java -jar ./target/bootJar.jar'
  	}
  	}
 	stage('clean jenkins workspace') {
