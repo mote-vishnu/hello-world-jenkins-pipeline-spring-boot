@@ -1,10 +1,9 @@
 pipeline{
  agent any
  	stages { 	
- 	 stage('Clone source') {
+  	 stage('Clone source') {
  	steps {
- 	bat 'git fetch'
- 	bat 'git pull origin master'
+ 	checkout scm
  	}
  	}
  	stage('Build project') {
@@ -15,7 +14,7 @@ pipeline{
  	
  	stage('Deploy') {
  	steps {
- 	 bat 'java -jar /target/*.jar'
+ 	 bat 'java -jar ./hello-world-jenkins-pipeline-spring-boot/target/bootJar.jar'
  	}
  	}
 	stage('clean jenkins workspace') {
