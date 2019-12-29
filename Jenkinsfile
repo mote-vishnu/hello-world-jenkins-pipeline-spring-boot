@@ -1,6 +1,11 @@
 pipeline{
  agent any
- 	stages { 	
+ 	stages { 
+ 	 stage('clean jenkins workspace') {
+	 steps {
+	  cleanWs()
+	 }
+	 }	
   	 stage('Clone source') {
  	steps {
  	checkout scm
@@ -17,10 +22,6 @@ pipeline{
  	 bat 'java -jar ./target/bootJar.jar'
  	}
  	}
-	stage('clean jenkins workspace') {
-	steps {
-	  cleanWs()
-	}
-	}
+	
  }
 }
