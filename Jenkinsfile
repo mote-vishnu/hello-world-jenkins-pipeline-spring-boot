@@ -6,11 +6,6 @@ pipeline{
 	  cleanWs()
 	 }
 	 }	
-  	 stage('Clone source') {
- 	steps {
- 	checkout scm
- 	}
- 	}
  	stage('Build project') {
  	steps {
  	 bat 'mvn clean package'
